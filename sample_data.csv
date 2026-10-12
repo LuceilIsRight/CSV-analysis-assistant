@@ -1,0 +1,12 @@
+id,name,age,income,city,signup_date,score,notes
+1,Asha,34,52000,Pune,2024-01-15,88.5,ok
+2,Ravi,29,48000,Mumbai,2024-02-03,92.1,ok
+3,Meera,-999,61000,Pune,2024-02-20,75.0,N/A
+4,Karan,41,,Delhi,2024-03-11,81.2, ok
+5,Asha,34,52000,Pune,2024-01-15,88.5,ok
+6,Neha,52,9999,Mumbai,2024-04-02,67.9,?
+7,Imran,38,57000,Delhi,2024-04-18,,ok
+8,Sara,27,"45,000",Pune,2024-05-09,90.3,ok
+9,Dev,45,70500,Mumbai,not a date,72.4,ok
+10,Tara,31,50500,Delhi,2024-06-21,85.0,ok
+2,Ravi,29,48000,Mumbai,2024-02-03,92.1,ok
