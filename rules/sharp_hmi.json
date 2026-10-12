@@ -1,0 +1,36 @@
+{
+  "name": "SDO/HMI SHARP keyword constraints (documented definitions only)",
+  "version": 1,
+  "notes": [
+    "Only constraints that follow from the published definition of a keyword are listed. Verify each against the primary source before relying on it in a publication.",
+    "Definitions were checked against formulas reproduced from Bobra et al. 2014 (arXiv:1404.1879) in arXiv:1603.03775 (Table 1) and arXiv:2207.07254 (Table 2).",
+    "Deliberately NOT constrained: MEANJZH and MEANALP are signed quantities (no absolute value in their definitions) and negative values are common, so a sign rule would flag valid measurements.",
+    "No upper bounds are given for flux, helicity, current or energy keywords: no documented physical limit exists, and unusual large values are reported as statistical warnings, not as rule violations."
+  ],
+  "rules": [
+    {"id": "SHARP-USFLUX-nonneg", "column": "USFLUX", "min": 0,
+     "basis": "definition: total UNSIGNED flux (sum of |Bz| dA)",
+     "description": "unsigned flux cannot be negative",
+     "source": "Bobra et al. 2014, arXiv:1404.1879 (keyword description)"},
+    {"id": "SHARP-TOTUSJH-nonneg", "column": "TOTUSJH", "min": 0,
+     "basis": "definition: H_c,total ~ sum |Bz . Jz| (sum of absolute values)",
+     "description": "total unsigned current helicity cannot be negative",
+     "source": "Bobra et al. 2014, arXiv:1404.1879; formula as in arXiv:1603.03775 Table 1"},
+    {"id": "SHARP-SAVNCPP-nonneg", "column": "SAVNCPP", "min": 0,
+     "basis": "definition: sum of the MODULUS of the net current per polarity",
+     "description": "a sum of moduli cannot be negative",
+     "source": "Bobra et al. 2014, arXiv:1404.1879; formula as in arXiv:1603.03775 Table 1"},
+    {"id": "SHARP-TOTPOT-nonneg", "column": "TOTPOT", "min": 0,
+     "basis": "definition: rho_tot ~ sum (B_obs - B_pot)^2 dA (a sum of squares)",
+     "description": "total photospheric free energy density proxy cannot be negative",
+     "source": "Bobra et al. 2014, arXiv:1404.1879; formula as in arXiv:1603.03775 Table 1"},
+    {"id": "SHARP-MEANSHR-range", "column": "MEANSHR", "min": 0, "max": 180, "unit": "degrees",
+     "basis": "mathematical range of arccos in the definition (mean of arccos(B_obs.B_pot/|B_obs||B_pot|))",
+     "description": "a mean shear angle between two vectors lies in 0 to 180 degrees",
+     "source": "Bobra et al. 2014, arXiv:1404.1879; formula as in arXiv:1603.03775 Table 1"},
+    {"id": "SHARP-MEANGAM-range", "column": "MEANGAM", "min": -90, "max": 90, "unit": "degrees",
+     "basis": "mathematical range of arctan in the definition (mean of arctan(Bh/Bz))",
+     "description": "a mean arctan angle lies within +/-90 degrees",
+     "source": "Bobra et al. 2014, arXiv:1404.1879; formula as in arXiv:1603.03775 Table 1"}
+  ]
+}
