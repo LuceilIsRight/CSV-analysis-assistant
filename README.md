@@ -1,4 +1,4 @@
-# CSV Analysis Assistant
+# CSV Analysis Assistant 
 
 A Python command-line tool for a first-pass inspection of CSV datasets. It reports the structure of a file, flags data-quality problems, draws basic plots, and writes a reproducible Markdown report together with an item-level audit trail. It **detects and explains; it never modifies or corrects your data.**
 
