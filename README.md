@@ -10,7 +10,7 @@ A Python command-line tool for a first-pass inspection of CSV datasets. It repor
 
 ---
 
-## Contents
+## Contents 
 
 - [What it does](#what-it-does)
 - [Installation](#installation)
